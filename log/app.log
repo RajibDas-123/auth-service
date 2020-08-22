@@ -1,0 +1,5 @@
+2020-08-22T15:39:55.518+0530	INFO	cmd/server.go:20	listening on :3000 
+2020-08-22T15:41:52.376+0530	INFO	cmd/server.go:19	listening on :3000 
+2020-08-22T15:43:19.783+0530	INFO	cmd/server.go:20	listening on :3000 
+2020-08-22T15:44:41.396+0530	INFO	cmd/server.go:19	listening on :3000 
+2020-08-22T15:45:14.962+0530	INFO	cmd/server.go:19	listening on :3000 

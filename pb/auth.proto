@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+
+package pb;
+
+service Authentication {
+  rpc Login (LoginRequest) returns (LoginResponse) {}
+  rpc Logout(LogoutRequest) returns(LogoutResponse){}
+  rpc IsSessionExist(IsSessionExistRequest) returns(IsSessionExistResponse){}
+  rpc GetSessionData(GetSessionDataRequest) returns(GetSessionDataResponse){}
+  rpc SetSessionData(SetSessionDataRequest) returns(SetSessionDataResponse){}
+}
+
+message SessionData{
+  string role = 1;
+  string email = 2;
+  string uid = 3;
+}
+
+message LoginRequest {
+  string email_id = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  bool success = 1;
+}
+
+message LogoutRequest {
+  string session_token = 1;
+}
+
+message LogoutResponse{
+  bool success = 1;
+}
+
+message IsSessionExistRequest {
+  string session_token = 1;
+}
+
+message IsSessionExistResponse{
+  bool success = 1;
+}
+
+message SetSessionDataRequest{
+  SessionData session_data = 1;
+}
+
+message SetSessionDataResponse{
+  bool success = 1;
+}
+message GetSessionDataRequest{
+  string session_token = 1;
+}
+
+message GetSessionDataResponse{
+  SessionData session_data = 1;
+}
+	
